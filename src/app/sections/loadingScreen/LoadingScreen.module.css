@@ -1,0 +1,21 @@
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    color: #ccd6f6;
+    background: var(--darkBackgroundColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoContainer {
+    background: var(--darkBackgroundColor);
+}
+
+.logo {
+    background: var(--darkBackgroundColor);
+    height: 100px;
+    width: 100px;
+}

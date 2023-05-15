@@ -1,0 +1,65 @@
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    color: var(--lightFontColor);
+    font-weight: 500;
+    font-size: 13px;
+    position: absolute;
+    width: 100%;
+}
+
+.rightContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.linkButton, .linkButtonText, .linkButtonNumber {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--codeFontFamily);
+    gap: 5px;
+    cursor: pointer;
+}
+
+.linkButton:hover {
+    color: var(--primaryColor);
+}
+
+.linkButtonNumber {
+    color: var(--primaryColor);
+}
+
+.logoContainer {
+    display: flex;
+    padding: 0;
+    /*border: white solid 1px;*/
+    position: relative;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.logo {
+    position: absolute;
+    background: transparent;
+}
+
+.logoBg {
+    position: absolute;
+    background: transparent;
+}
+
+a.downloadButton {
+    all: unset;
+}
+

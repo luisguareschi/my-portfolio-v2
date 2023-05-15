@@ -1,0 +1,21 @@
+.container {
+    border-color: var(--primaryColor);
+    color: var(--primaryColor);
+    font-family: var(--codeFontFamily);
+    border-radius: 4px;
+    background: var(--primaryColor);
+    cursor: pointer;
+}
+
+.button {
+    all: unset;
+    border-color: var(--primaryColor);
+    color: var(--primaryColor);
+    font-family: var(--codeFontFamily);
+    border-width: 1px;
+    border-style: solid;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    background: var(--backgroundColor);
+    z-index: 10;
+}

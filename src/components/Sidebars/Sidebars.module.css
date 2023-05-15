@@ -1,0 +1,48 @@
+
+.rightContainer, .leftContainer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--regularFontColor);
+    gap: 30px
+}
+
+.rightContainer {
+    right: 50px;
+    max-width: 10px;
+}
+
+.leftContainer {
+    left: 50px;
+}
+
+.icon {
+    width: 20px !important;
+    height: 20px !important;
+    color: var(--regularFontColor);
+}
+
+.icon:hover {
+    color:  var(--primaryColor);
+}
+
+.bar {
+    width: 1px;
+    border-radius: 2px;
+    height: 100px;
+    min-height: 100px;
+    background: var(--regularFontColor);
+}
+
+.email {
+    font-size: 13px;
+    font-family: var(--codeFontFamily);
+    color: var(--regularFontColor)
+}
+
+.email:hover {
+    color: var(--primaryColor);
+}
