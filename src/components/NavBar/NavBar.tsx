@@ -65,10 +65,10 @@ const NavBar = () => {
                 </motion.div>
             </motion.div>
             <div className={styles.rightContainer}>
-                <LinkButton number={1} title={"About"} onClick={(event) => alert("clicked")}/>
-                <LinkButton number={2} title={"Experience"} onClick={(event) => alert("clicked")}/>
-                <LinkButton number={3} title={"Work"} onClick={(event) => alert("clicked")}/>
-                <LinkButton number={4} title={"Contact"} onClick={(event) => alert("clicked")}/>
+                <LinkButton number={1} title={"About"} onClick={(event: Event) => alert("clicked")}/>
+                <LinkButton number={2} title={"Experience"} onClick={(event: Event) => alert("clicked")}/>
+                <LinkButton number={3} title={"Work"} onClick={(event: Event) => alert("clicked")}/>
+                <LinkButton number={4} title={"Contact"} onClick={(event: Event) => alert("clicked")}/>
                 <motion.div variants={navbarItem}>
                     <Button onClick={(event)=>downloadCV()}>
                         <a download={"LuisGuareschiResume.pdf"} href="LuisGuareschiResume.pdf" className={styles.downloadButton}>
