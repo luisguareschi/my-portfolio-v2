@@ -1,7 +1,6 @@
 "use client"
 import styles from "./LoadingScreen.module.css"
 import {motion} from "framer-motion";
-import {useState} from "react";
 
 const duration1 = 0.8
 const delay = duration1 + .5
@@ -28,7 +27,11 @@ const AnimatedLogo = () => {
     )
 }
 
-const LoadingScreen = ({setLoading}) => {
+interface LoadingScreenProps {
+    setLoading: any
+}
+
+const LoadingScreen = ({setLoading}:LoadingScreenProps) => {
     return (
         <div className={styles.container}>
             <motion.div className={styles.logoContainer}
