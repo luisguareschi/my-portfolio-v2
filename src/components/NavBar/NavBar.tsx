@@ -27,9 +27,6 @@ const navbarItem = {
     show: { opacity: 1 , y:0}
 };
 
-const downloadCV = () => {
-
-}
 
 const LinkButton = ({number, title, onClick}:linkButtonProps) => {
     return (
@@ -70,7 +67,7 @@ const NavBar = () => {
                 <LinkButton number={3} title={"Work"} onClick={(event: Event) => alert("clicked")}/>
                 <LinkButton number={4} title={"Contact"} onClick={(event: Event) => alert("clicked")}/>
                 <motion.div variants={navbarItem}>
-                    <Button onClick={(event)=>downloadCV()}>
+                    <Button>
                         <a download={"LuisGuareschiResume.pdf"} href="LuisGuareschiResume.pdf" className={styles.downloadButton}>
                             Resume
                         </a>

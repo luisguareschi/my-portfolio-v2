@@ -2,7 +2,7 @@ import styles from "./Button.module.css"
 import {motion} from "framer-motion";
 
 interface buttonProps {
-    onClick:any;
+    onClick?:any;
     children: any;
     className?: string
 }
