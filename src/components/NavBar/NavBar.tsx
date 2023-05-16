@@ -7,6 +7,7 @@ import bgLogoSrc from "../../../public/logoBackground.svg"
 import {motion} from "framer-motion";
 import useWindowSize from "@/functions/useWindowSize";
 import {BiMenuAltRight} from "react-icons/bi";
+import {useEffect, useState} from "react";
 interface linkButtonProps {
     number: number;
     title: string;
@@ -50,11 +51,24 @@ const LinkButton = ({number, title, onClick}:linkButtonProps) => {
 
 const NavBar = () => {
     const windowSize = useWindowSize()
+    const [mobileVersion, setMobileVersion] = useState<boolean>(false)
     const handleLogoClick = () => {
         alert("clicked")
     }
 
-    if (windowSize.width <= 800) {
+    useEffect(() => {
+        if (windowSize.width === 0) {
+            return
+        }
+        if (windowSize.width <= 800) {
+            setMobileVersion(true)
+        }
+        else {
+            setMobileVersion(false)
+        }
+    }, [windowSize.width])
+
+    if (mobileVersion) {
         return (
             <motion.div className={styles.mobileContainer} variants={navbarContainer} initial={"hidden"} animate={"show"}>
                 <motion.div className={styles.logoContainer}
