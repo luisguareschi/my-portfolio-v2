@@ -6,14 +6,15 @@
 :root {
   --codeFontFamily: 'SF Mono', monospace;
   --fontFamily: 'Calibre', monospace;
-  --backgroundColor: rgb(10, 25, 47);
+  --backgroundColor: #0A192FFF;
   --primaryColor: #64FFDAFF;
   --secondaryColor: #112240;
   --lightFontColor: #ccd6f6;
   --regularFontColor: #8892b0;
   --boxShadow: 0 10px 30px -15px rgba(2,12,27,0.7);
   --darkBackgroundColor: #020c1b;
-  --selectionColor: #61687d
+  --selectionColor: #61687d;
+  --mobileWidth: 800px
 }
 
 * {
@@ -25,5 +26,26 @@
 }
 
 *::selection {
+  background: var(--selectionColor);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--selectionColor);
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
   background: var(--selectionColor);
 }

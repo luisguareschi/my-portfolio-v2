@@ -7,6 +7,15 @@
     height: 100vh;
     font-family: var(--fontFamily);
     color: var(--regularFontColor);
+    margin: 0 auto;
+    max-width: 1200px;
+    min-height: 570px;
+}
+
+@media (max-height: 570px) {
+    .container {
+        padding-top: 20px;
+    }
 }
 
 .helloMsg {
@@ -17,13 +26,13 @@
 }
 
 .name {
-    font-size: 80px;
+    font-size: min(6vw, 80px);
     color: var(--lightFontColor);
     font-weight: 600;
 }
 
 .position {
-    font-size: 80px;
+    font-size: min(6vw, 80px);
     font-weight: 600;
 }
 
@@ -36,4 +45,16 @@
 .button {
     margin-top: 30px;
     font-size: 13px;
+}
+
+@media (max-width: 800px) {
+    .container {
+        min-height: 100vh;
+    }
+    .description {
+        max-width: 100%;
+    }
+    .name, .position {
+        font-size: 10vw;
+    }
 }

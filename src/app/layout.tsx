@@ -15,6 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+          <meta name="theme-color" content="#0A192FFF" />
+          <title>Luis Guareschi</title>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )

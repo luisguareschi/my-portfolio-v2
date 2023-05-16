@@ -1,6 +1,6 @@
 
 .rightContainer, .leftContainer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     display: flex;
     flex-direction: column;
@@ -45,4 +45,10 @@
 
 .email:hover {
     color: var(--primaryColor);
+}
+
+@media (max-width: 800px) {
+    .rightContainer, .leftContainer {
+        opacity: 0 !important;
+    }
 }

@@ -5,6 +5,7 @@ import Homepage from "@/app/sections/homepage/Homepage";
 import Sidebars from "@/components/Sidebars/Sidebars";
 import {useState} from "react";
 import LoadingScreen from "@/app/sections/loadingScreen/LoadingScreen";
+import AboutPage from "@/app/sections/aboutMe/AboutPage";
 
 export default function Home() {
     const [loading, setLoading] = useState(true)
@@ -19,6 +20,7 @@ export default function Home() {
           <Sidebars />
           <div className={styles.bodyContainer}>
               <Homepage />
+              <AboutPage />
           </div>
       </>
     )
