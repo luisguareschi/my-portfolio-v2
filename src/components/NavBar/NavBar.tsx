@@ -8,6 +8,7 @@ import {motion} from "framer-motion";
 import useWindowSize from "@/functions/useWindowSize";
 import {BiMenuAltRight} from "react-icons/bi";
 import {useEffect, useState} from "react";
+import SidebarMenu from "@/components/NavBar/SidebarMenu";
 interface linkButtonProps {
     number: number;
     title: string;
@@ -52,6 +53,12 @@ const LinkButton = ({number, title, onClick}:linkButtonProps) => {
 const NavBar = () => {
     const windowSize = useWindowSize()
     const [mobileVersion, setMobileVersion] = useState<boolean>(false)
+    const [showSidebar, setShowSidebar] = useState<boolean>(false)
+
+    const scroll = (id:string) => {
+        document.getElementById("aboutPage").scrollIntoView()
+    }
+
     const handleLogoClick = () => {
         alert("clicked")
     }
@@ -65,24 +72,29 @@ const NavBar = () => {
         }
         else {
             setMobileVersion(false)
+            setShowSidebar(false)
+            document.body.style.overflowY = "scroll";
         }
     }, [windowSize.width])
 
     if (mobileVersion) {
         return (
-            <motion.div className={styles.mobileContainer} variants={navbarContainer} initial={"hidden"} animate={"show"}>
-                <motion.div className={styles.logoContainer}
-                            onClick={handleLogoClick}
-                            variants={navbarItem}>
-                    <Image src={bgLogoSrc} alt={"bg"} width={50} className={styles.logoBg}/>
-                    <motion.div whileHover={{x: -3, y: -2.5}}>
-                        <Image src={logoSrc} alt={"Logo"} width={50} className={styles.logo}/>
+            <>
+                <motion.div className={styles.mobileContainer} variants={navbarContainer} initial={"hidden"} animate={"show"}>
+                    <motion.div className={styles.logoContainer}
+                                onClick={handleLogoClick}
+                                variants={navbarItem}>
+                        <Image src={bgLogoSrc} alt={"bg"} width={50} className={styles.logoBg}/>
+                        <motion.div whileHover={{x: -3, y: -2.5}}>
+                            <Image src={logoSrc} alt={"Logo"} width={50} className={styles.logo}/>
+                        </motion.div>
+                    </motion.div>
+                    <motion.div variants={navbarItem} onClick={()=>setShowSidebar(true)}>
+                        <BiMenuAltRight className={styles.hamburgerMenu}/>
                     </motion.div>
                 </motion.div>
-                <motion.div variants={navbarItem}>
-                    <BiMenuAltRight className={styles.hamburgerMenu}/>
-                </motion.div>
-            </motion.div>
+                <SidebarMenu show={showSidebar} setShowSidebar={(value: any) => setShowSidebar(value)}/>
+            </>
         )
     }
 
@@ -98,7 +110,7 @@ const NavBar = () => {
                 </motion.div>
             </motion.div>
             <div className={styles.rightContainer}>
-                <LinkButton number={1} title={"About"} onClick={(event: Event) => alert("clicked")}/>
+                <LinkButton number={1} title={"About"} onClick={(event: Event) => scroll("aboutPage")}/>
                 <LinkButton number={2} title={"Experience"} onClick={(event: Event) => alert("clicked")}/>
                 <LinkButton number={3} title={"Projects"} onClick={(event: Event) => alert("clicked")}/>
                 <LinkButton number={4} title={"Contact"} onClick={(event: Event) => alert("clicked")}/>
@@ -115,3 +127,4 @@ const NavBar = () => {
 }
 
 export default NavBar
+export {LinkButton}

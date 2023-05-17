@@ -1,6 +1,7 @@
 
 .bodyContainer {
     padding: 0 12vw;
+    background: var(--backgroundColor);
 }
 
 @media (max-width: 800px) {

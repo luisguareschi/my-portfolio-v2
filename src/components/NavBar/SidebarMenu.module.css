@@ -1,0 +1,44 @@
+
+.container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.sidebarContainer {
+    height: 100%;
+    padding: 0 65px;
+    /*max-width: 300px;*/
+    background-color: var(--secondaryColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.closeButton {
+    all: unset;
+    font-size: 40px;
+    color: var(--primaryColor);
+    font-family: var(--codeFontFamily);
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    background: transparent;
+}
+
+.closeButton svg {
+    background: transparent;
+}
+
+a.downloadButton {
+    all: unset;
+}

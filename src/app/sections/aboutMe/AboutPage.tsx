@@ -5,15 +5,17 @@ import {motion} from "framer-motion";
 
 const ProfilePicture = () => {
     return (
-        <div className={styles.profileContainer}>
-            <Image src={"/profile.JPG"} alt={"profile"} width={493} height={393} className={styles.img}/>
-        </div>
+        <motion.div className={styles.profileContainer} whileHover={{x: 10, y:10}}>
+            <motion.div whileHover={{x: -15, y:-15}} style={{background: "transparent"}}>
+                <Image src={"/profile.JPG"} alt={"profile"} width={493} height={393} className={styles.img}/>
+            </motion.div>
+        </motion.div>
     )
 }
 
 const AboutPage = () => {
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id={"aboutPage"}>
             <div className={styles.separatorContainer}>
                 <TitleSeparator  number={"01"} title={"About Me"}/>
             </div>

@@ -29,10 +29,15 @@
     font-family: var(--codeFontFamily);
     gap: 5px;
     cursor: pointer;
+    color: var(--lightFontColor);
 }
 
 .linkButton:hover {
-    color: var(--primaryColor);
+    color: var(--primaryColor) !important;
+}
+
+.linkButtonText:hover {
+    color: var(--primaryColor) !important;
 }
 
 .linkButtonNumber {

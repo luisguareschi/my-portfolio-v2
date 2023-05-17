@@ -21,7 +21,7 @@ const item = {
 
 const Homepage = () => {
     return (
-        <motion.div className={styles.container} initial={"hidden"} animate={"show"} variants={container}>
+        <motion.div className={styles.container} initial={"hidden"} animate={"show"} variants={container} id={"homePage"}>
             <motion.div className={styles.helloMsg} variants={item}>
                 Hi, my name is
             </motion.div>

@@ -22,7 +22,7 @@
   padding: 0;
   margin: 0;
   font-family: var(--fontFamily);
-  background: var(--backgroundColor);
+  scroll-behavior: smooth;
 }
 
 *::selection {
@@ -36,7 +36,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--backgroundColor);
 }
 
 /* Handle */
