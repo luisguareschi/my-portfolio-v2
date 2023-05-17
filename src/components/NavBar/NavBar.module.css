@@ -11,6 +11,7 @@
     font-size: 13px;
     position: absolute;
     width: 100%;
+    background: var(--backgroundColor);
 }
 
 .rightContainer {
@@ -80,6 +81,7 @@ a.downloadButton {
     font-size: 13px;
     position: absolute;
     width: 100%;
+    background: var(--backgroundColor);
 }
 
 .hamburgerMenu {

@@ -50,10 +50,15 @@ const LinkButton = ({number, title, onClick}:linkButtonProps) => {
 }
 
 
-const NavBar = () => {
+interface navbarProps {
+    showInitialAnimation: boolean
+}
+
+const NavBar = ({showInitialAnimation}:navbarProps) => {
     const windowSize = useWindowSize()
     const [mobileVersion, setMobileVersion] = useState<boolean>(false)
     const [showSidebar, setShowSidebar] = useState<boolean>(false)
+    const containerVariant: any = showInitialAnimation ? navbarContainer : {}
 
     const scroll = (id:string) => {
         document.getElementById("aboutPage").scrollIntoView()
@@ -80,7 +85,7 @@ const NavBar = () => {
     if (mobileVersion) {
         return (
             <>
-                <motion.div className={styles.mobileContainer} variants={navbarContainer} initial={"hidden"} animate={"show"}>
+                <motion.div className={styles.mobileContainer} variants={containerVariant} initial={"hidden"} animate={"show"}>
                     <motion.div className={styles.logoContainer}
                                 onClick={handleLogoClick}
                                 variants={navbarItem}>
@@ -99,7 +104,7 @@ const NavBar = () => {
     }
 
     return (
-        <motion.div className={styles.container} variants={navbarContainer} initial={"hidden"} animate={"show"}>
+        <motion.div className={styles.container} variants={containerVariant} initial={"hidden"} animate={"show"}>
             <motion.div className={styles.logoContainer}
                         onClick={handleLogoClick}
                         variants={navbarItem}

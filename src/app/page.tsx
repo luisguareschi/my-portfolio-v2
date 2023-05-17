@@ -7,6 +7,7 @@ import {useEffect, useRef, useState} from "react";
 import LoadingScreen from "@/app/sections/loadingScreen/LoadingScreen";
 import AboutPage from "@/app/sections/aboutMe/AboutPage";
 import Button from "@/components/Button/Button";
+import StickyNavbar from "@/components/NavBar/StickyNavbar";
 
 export default function Home() {
     const [loading, setLoading] = useState(true)
@@ -18,7 +19,7 @@ export default function Home() {
     }
     return (
       <>
-          <NavBar />
+          <StickyNavbar />
           <Sidebars />
           <div className={styles.bodyContainer}>
               <Homepage />
