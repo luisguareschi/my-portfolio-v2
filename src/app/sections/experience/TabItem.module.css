@@ -1,0 +1,28 @@
+
+.container {
+    font-family: var(--codeFontFamily);
+    padding: 15px 15px;
+    font-size: 16px;
+    transition: all .2s ease-out;
+    border-left: var(--lightNavy) 2px solid;
+    border-radius: 1px;
+    width: 200px;
+    min-width: max-content;
+}
+
+@media (max-width: 800px) {
+    .container {
+        border-bottom: var(--lightNavy) 2px solid;
+        border-left: unset;
+    }
+}
+
+.container:hover, .selected{
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    transition: all .2s ease-in;
+}
+
+.selected {
+    border-color: var(--primaryColor);
+}

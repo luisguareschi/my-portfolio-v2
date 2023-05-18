@@ -8,6 +8,7 @@ import LoadingScreen from "@/app/sections/loadingScreen/LoadingScreen";
 import AboutPage from "@/app/sections/aboutMe/AboutPage";
 import Button from "@/components/Button/Button";
 import StickyNavbar from "@/components/NavBar/StickyNavbar";
+import ExperiencePage from "@/app/sections/experience/ExperiencePage";
 
 export default function Home() {
     const [loading, setLoading] = useState(true)
@@ -24,6 +25,7 @@ export default function Home() {
           <div className={styles.bodyContainer}>
               <Homepage />
               <AboutPage />
+              <ExperiencePage />
           </div>
       </>
     )

@@ -1,0 +1,68 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    align-self: start;
+    max-width: 100%;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-family: var(--fontFamily);
+    color: var(--lightFontColor);
+    font-size: 25px;
+}
+
+.company {
+    color: var(--primaryColor);
+}
+
+.dateContainer {
+    font-family: var(--codeFontFamily);
+    font-size: 15px;
+}
+
+.descriptionContainer {
+    padding-top: 20px;
+    padding-left: 30px;
+    max-width: 100%;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.descriptionContainer ul {
+    list-style: none;
+    max-width: 100%;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.descriptionContainer li {
+    margin-bottom: 10px;
+    max-width: 100%;
+    width: 100%;
+}
+
+li.descriptionItem::before {
+    content: "▹";
+    color: var(--primaryColor);
+    font-weight: 600;
+    font-size: 20px;
+    display: inline-block; /*for spacing purposes*/
+    width: 1.5em; /*Also for spacing but you can change it to whatever*/
+    margin-left: -1.5em; /*Also for spacing*/
+}
+
+@media (max-width: 800px) {
+    .descriptionItem {
+        text-align: justify;
+    }
+}
+
+.descriptionItem a{
+    color: var(--primaryColor);
+}

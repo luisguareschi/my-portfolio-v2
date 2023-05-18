@@ -61,7 +61,7 @@ const NavBar = ({showInitialAnimation}:navbarProps) => {
     const containerVariant: any = showInitialAnimation ? navbarContainer : {}
 
     const scroll = (id:string) => {
-        document.getElementById("aboutPage").scrollIntoView()
+        document.getElementById(id).scrollIntoView()
     }
 
     const handleLogoClick = () => {
@@ -116,7 +116,7 @@ const NavBar = ({showInitialAnimation}:navbarProps) => {
             </motion.div>
             <div className={styles.rightContainer}>
                 <LinkButton number={1} title={"About"} onClick={(event: Event) => scroll("aboutPage")}/>
-                <LinkButton number={2} title={"Experience"} onClick={(event: Event) => alert("clicked")}/>
+                <LinkButton number={2} title={"Experience"} onClick={(event: Event) => scroll("experiencePage")}/>
                 <LinkButton number={3} title={"Projects"} onClick={(event: Event) => alert("clicked")}/>
                 <LinkButton number={4} title={"Contact"} onClick={(event: Event) => alert("clicked")}/>
                 <motion.div variants={navbarItem}>

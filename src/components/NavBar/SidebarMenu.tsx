@@ -21,7 +21,7 @@ const SidebarMenu = ({show, setShowSidebar}:props) => {
     }
 
     const scroll = (id:string) => {
-        document.getElementById("aboutPage").scrollIntoView()
+        document.getElementById(id).scrollIntoView()
         handleClose()
     }
 
@@ -46,7 +46,7 @@ const SidebarMenu = ({show, setShowSidebar}:props) => {
                             <TfiClose/>
                         </button>
                         <LinkButton number={1} title={"About"} onClick={(event) => scroll("aboutPage")}/>
-                        <LinkButton number={2} title={"Experience"} onClick={(event) => alert("clicked")}/>
+                        <LinkButton number={2} title={"Experience"} onClick={(event) => scroll("experiencePage")}/>
                         <LinkButton number={3} title={"Projects"} onClick={(event) => alert("clicked")}/>
                         <LinkButton number={4} title={"Contact"} onClick={(event) => alert("clicked")}/>
                         <Button>

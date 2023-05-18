@@ -2,11 +2,13 @@
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     font-size: 35px;
     color: var(--lightFontColor);
     font-family: var(--fontFamily);
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 .number {
@@ -19,13 +21,20 @@
 
 .title {
     font-weight: 600;
-    width: max-content;
+    width: fit-content;
+    white-space: nowrap;
 }
 
 .separator {
     margin-left: 20px;
     max-width: 300px;
-    width: 30vw;
+    width: 100%;
     height: 1px;
     background: #233554;;
+}
+
+@media (max-width: 800px) {
+    .container {
+        font-size: 30px;
+    }
 }

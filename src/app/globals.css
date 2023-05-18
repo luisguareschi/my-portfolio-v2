@@ -14,7 +14,8 @@
   --boxShadow: 0 10px 30px -15px rgba(2,12,27,0.7);
   --darkBackgroundColor: #020c1b;
   --selectionColor: #61687d;
-  --mobileWidth: 800px
+  --mobileWidth: 800px;
+  --lightNavy: #233554;
 }
 
 * {
