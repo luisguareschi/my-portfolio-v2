@@ -107,4 +107,4 @@ const ExperiencePage = () => {
 }
 
 export default ExperiencePage
-export {tabItem}
+export type {tabItem}
