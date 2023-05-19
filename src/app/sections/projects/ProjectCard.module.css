@@ -1,0 +1,77 @@
+
+.container {
+    background: var(--secondaryColor);
+    color: var(--regularFontColor);
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    /*height: 300px;*/
+    /*width: 300px;*/
+    font-size: 20px;
+    box-shadow: 0 10px 30px -15px var(--darkBackgroundColor);
+    border-radius: 5px;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.rightHeader {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: var(--regularFontColor);
+}
+
+.folderIcon {
+    color: var(--primaryColor);
+    font-size: 45px;
+}
+
+.githubIcon {
+    font-size: 25px;
+    transition: ease-in .15s;
+}
+
+.githubIcon:hover {
+    color: var(--primaryColor);
+    transition: ease-in .15s;
+}
+
+.bodyContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    height: 100%;
+    gap: 10px;
+}
+
+.title {
+    margin-top: 25px;
+    color: var(--lightFontColor);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.description {
+    height: 100%;
+}
+
+.tools {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-family: var(--codeFontFamily);
+    font-size: 10px;
+}
+
+.tools p {
+    font-family: var(--codeFontFamily);
+}

@@ -9,6 +9,8 @@ import AboutPage from "@/app/sections/aboutMe/AboutPage";
 import Button from "@/components/Button/Button";
 import StickyNavbar from "@/components/NavBar/StickyNavbar";
 import ExperiencePage from "@/app/sections/experience/ExperiencePage";
+import ProjectsPage from "@/app/sections/projects/ProjectsPage";
+import ContactPage from "@/app/sections/contact/ContactPage";
 
 export default function Home() {
     const [loading, setLoading] = useState(true)
@@ -26,6 +28,8 @@ export default function Home() {
               <Homepage />
               <AboutPage />
               <ExperiencePage />
+              <ProjectsPage />
+              <ContactPage />
           </div>
       </>
     )

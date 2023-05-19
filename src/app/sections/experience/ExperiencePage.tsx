@@ -85,7 +85,7 @@ const ExperiencePage = () => {
     const [selectedTab, setSelectedTab] = useState<number>(0)
     return (
         <div className={styles.container} id={"experiencePage"}>
-            <TitleSeparator  number={"02"} title={"Where I've worked"}/>
+            <TitleSeparator  number={"02"} title={"Where I've Worked"}/>
             <div className={styles.bodyContainer}>
                 <div className={styles.leftContainer}>
                     {tabItems.map((item, index) => {

@@ -117,8 +117,8 @@ const NavBar = ({showInitialAnimation}:navbarProps) => {
             <div className={styles.rightContainer}>
                 <LinkButton number={1} title={"About"} onClick={(event: Event) => scroll("aboutPage")}/>
                 <LinkButton number={2} title={"Experience"} onClick={(event: Event) => scroll("experiencePage")}/>
-                <LinkButton number={3} title={"Projects"} onClick={(event: Event) => alert("clicked")}/>
-                <LinkButton number={4} title={"Contact"} onClick={(event: Event) => alert("clicked")}/>
+                <LinkButton number={3} title={"Projects"} onClick={(event: Event) => scroll("worksPage")}/>
+                <LinkButton number={4} title={"Contact"} onClick={(event: Event) => scroll("contactPage")}/>
                 <motion.div variants={navbarItem}>
                     <Button>
                         <a download={"LuisGuareschiResume.pdf"} href="LuisGuareschiResume.pdf" className={styles.downloadButton}>

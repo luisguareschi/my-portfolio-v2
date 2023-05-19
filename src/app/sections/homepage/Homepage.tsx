@@ -19,6 +19,10 @@ const item = {
     show: {opacity: 1, y: 0, transition: {duration: .2}}
 }
 
+const scroll = (id:string) => {
+    document.getElementById(id).scrollIntoView()
+}
+
 const Homepage = () => {
     return (
         <motion.div className={styles.container} initial={"hidden"} animate={"show"} variants={container} id={"homePage"}>
@@ -38,7 +42,7 @@ const Homepage = () => {
                 human-centered products at Upstatement.
             </motion.div>
             <motion.div variants={item}>
-                <Button onClick={null} className={styles.button}>
+                <Button onClick={()=>scroll("aboutPage")} className={styles.button}>
                     Learn more about me
                 </Button>
             </motion.div>

@@ -47,8 +47,8 @@ const SidebarMenu = ({show, setShowSidebar}:props) => {
                         </button>
                         <LinkButton number={1} title={"About"} onClick={(event) => scroll("aboutPage")}/>
                         <LinkButton number={2} title={"Experience"} onClick={(event) => scroll("experiencePage")}/>
-                        <LinkButton number={3} title={"Projects"} onClick={(event) => alert("clicked")}/>
-                        <LinkButton number={4} title={"Contact"} onClick={(event) => alert("clicked")}/>
+                        <LinkButton number={3} title={"Projects"} onClick={(event) => scroll("worksPage")}/>
+                        <LinkButton number={4} title={"Contact"} onClick={(event) => scroll("contactPage")}/>
                         <Button>
                             <a download={"LuisGuareschiResume.pdf"} href="LuisGuareschiResume.pdf" className={styles.downloadButton}>
                                 Resume
