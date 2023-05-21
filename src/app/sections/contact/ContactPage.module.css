@@ -42,13 +42,3 @@
 .button {
     all: unset;
 }
-
-.footer {
-    position: absolute;
-    bottom: 20px;
-    font-size: 12px;
-    font-family: var(--codeFontFamily);
-    color: var(--regularFontColor);
-    text-align: center;
-    line-height: 25px;
-}

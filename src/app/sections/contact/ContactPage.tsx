@@ -1,6 +1,7 @@
 import styles from "./ContactPage.module.css"
 import TitleSeparator from "@/components/TitleSeparator/TitleSeparator";
 import Button from "@/components/Button/Button";
+import Footer from "@/components/footer/Footer";
 
 const ContactPage = () => {
     return (
@@ -20,10 +21,7 @@ const ContactPage = () => {
                     Contact Me
                 </a>
             </Button>
-            <div className={styles.footer}>
-                Designed & Built by Luis Guareschi <br/>
-                Next JS & Typescript
-            </div>
+            <Footer />
         </div>
     )
 }

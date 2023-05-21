@@ -23,7 +23,7 @@ const projects:projectInfo[] = [
     },
     {
         title: "Paso Homes",
-        description: "Helping out in a start up by making a home renting website similar using firebase and react. " +
+        description: "Helping out in a start up by making a home renting website using firebase and react. " +
             "The site its still in development.",
         tools: ["React Js", "Firebase", "Google Cloud Platform"]
     },
@@ -31,7 +31,7 @@ const projects:projectInfo[] = [
         title: "Digitalizacion Calidad",
         description: "Webpage made with React Js & Python that serves for " +
             "the quality control of the bolts of the airplane to later be analyzed with Machine Learning to create " +
-            "statistical analysis. ",
+            "statistical analysis of the defects. ",
         tools: ["React Js", "Python", "Typescript", "SQL", "Flask", "Pandas"],
         githubLink: "https://github.com/luisguareschi/digitalizacion-calidad-react"
     },
@@ -66,7 +66,7 @@ const projects:projectInfo[] = [
     },
     {
         title: "Tron Reloaded",
-        description: "A retro videogame coded in python that emulates the arcade game 'TRON'.",
+        description: "A retro video game coded in python that emulates the arcade game 'TRON'.",
         tools: ["Python", "Pyxel"],
         githubLink: "https://github.com/luisguareschi/TRON_RELOADED_v2"
     }
