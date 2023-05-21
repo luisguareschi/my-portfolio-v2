@@ -6,17 +6,21 @@ import {motion} from "framer-motion";
 
 interface props {
     projectInfo: projectInfo;
-    delay: number
 }
 
-const ProjectCard = ({projectInfo, delay}:props) => {
+const item = {
+    hidden: {opacity: 0, scale: 0},
+    show: {opacity: 1, scale: 1, transition: {duration: .2}}
+}
+
+const ProjectCard = ({projectInfo}:props) => {
     return (
         <motion.div className={styles.container}
-                    whileHover={{scale: 1.025}}
-                    initial={{scale: 0, opacity: 0}}
-                    exit={{scale: 0, opacity: 0}}
-                    animate={{scale: 1, opacity: 1}}
-                    transition={{delay: delay/20}}>
+                    variants={item}
+                    initial="hidden"
+                    animate="show"
+                    exit="hidden"
+                    whileHover={{scale: 1.025}}>
             <div className={styles.headerContainer}>
                 <CiFolderOn className={styles.folderIcon}/>
                 <div className={styles.rightHeader}>

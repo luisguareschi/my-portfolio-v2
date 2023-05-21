@@ -5,7 +5,7 @@ import ProjectCard from '@/app/sections/projects/ProjectCard';
 import Button from '@/components/Button/Button';
 import useWindowSize from "@/functions/useWindowSize";
 import {FadeInWhenVisible} from "@/functions/Animations";
-import {AnimatePresence} from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 
 interface projectInfo {
     title: string;
@@ -75,6 +75,17 @@ const projects:projectInfo[] = [
 
 ]
 
+const container = {
+    hidden: {opacity: 0},
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.5,
+            delayChildren: 1,
+        }
+    }
+}
+
 const ProjectsPage = () => {
     const [showMore, setShowMore] = useState(false);
     const windowSize = useWindowSize()
@@ -92,13 +103,13 @@ const ProjectsPage = () => {
                 <div className={styles.title}>
                     Here are some of the projects I have worked on throughout my career
                 </div>
-                <div className={styles.projectsContainer}>
+                <motion.div className={styles.projectsContainer} variants={container} initial="hidden" animate={"show"}>
                     <AnimatePresence>
                         {displayedProjects.map((project, index) => (
-                            <ProjectCard projectInfo={project} key={index} delay={index}/>
+                            <ProjectCard projectInfo={project} key={index}/>
                         ))}
                     </AnimatePresence>
-                </div>
+                </motion.div>
                 <Button onClick={toggleShowMore}>
                     {showMore ? 'Show Less' : 'Show More'}
                 </Button>
