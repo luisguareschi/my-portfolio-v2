@@ -11,6 +11,7 @@ import StickyNavbar from "@/components/NavBar/StickyNavbar";
 import ExperiencePage from "@/app/sections/experience/ExperiencePage";
 import ProjectsPage from "@/app/sections/projects/ProjectsPage";
 import ContactPage from "@/app/sections/contact/ContactPage";
+import {FadeInWhenVisible} from "@/functions/Animations";
 
 export default function Home() {
     const [loading, setLoading] = useState(true)

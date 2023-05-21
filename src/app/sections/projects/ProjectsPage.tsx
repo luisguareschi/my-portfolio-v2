@@ -4,6 +4,8 @@ import TitleSeparator from '@/components/TitleSeparator/TitleSeparator';
 import ProjectCard from '@/app/sections/projects/ProjectCard';
 import Button from '@/components/Button/Button';
 import useWindowSize from "@/functions/useWindowSize";
+import {FadeInWhenVisible} from "@/functions/Animations";
+import {AnimatePresence} from "framer-motion";
 
 interface projectInfo {
     title: string;
@@ -84,20 +86,24 @@ const ProjectsPage = () => {
     const displayedProjects = showMore ? projects : projects.slice(0, windowSize.width >= 800 ? 6 : 3);
 
     return (
-        <div className={styles.container} id="worksPage">
-            <TitleSeparator number="03" title="My Projects" />
-            <div className={styles.title}>
-                Here are some of the projects I have worked on throughout my career
+        <FadeInWhenVisible>
+            <div className={styles.container} id="worksPage">
+                <TitleSeparator number="03" title="My Projects" />
+                <div className={styles.title}>
+                    Here are some of the projects I have worked on throughout my career
+                </div>
+                <div className={styles.projectsContainer}>
+                    <AnimatePresence>
+                        {displayedProjects.map((project, index) => (
+                            <ProjectCard projectInfo={project} key={index} delay={index}/>
+                        ))}
+                    </AnimatePresence>
+                </div>
+                <Button onClick={toggleShowMore}>
+                    {showMore ? 'Show Less' : 'Show More'}
+                </Button>
             </div>
-            <div className={styles.projectsContainer}>
-                {displayedProjects.map((project, index) => (
-                    <ProjectCard projectInfo={project} key={index} />
-                ))}
-            </div>
-            <Button onClick={toggleShowMore}>
-                {showMore ? 'Show Less' : 'Show More'}
-            </Button>
-        </div>
+        </FadeInWhenVisible>
     );
 };
 

@@ -4,6 +4,7 @@ import TabItem from "@/app/sections/experience/TabItem";
 import {useState} from "react";
 import WorkInfo from "@/app/sections/experience/WorkInfo";
 import {AnimatePresence} from "framer-motion";
+import {FadeInWhenVisible} from "@/functions/Animations";
 
 type month = "Jan" | "Feb" | "Mar" | "Apr" | "May" | "Jun" | "Jul" | "Aug" | "Sept" | "Oct" | "Nov" | "Dec";
 type date = [month, number] | ["Present"];
@@ -84,25 +85,27 @@ const tabItems:tabItem[] = [
 const ExperiencePage = () => {
     const [selectedTab, setSelectedTab] = useState<number>(0)
     return (
-        <div className={styles.container} id={"experiencePage"}>
-            <TitleSeparator  number={"02"} title={"Where I've Worked"}/>
-            <div className={styles.bodyContainer}>
-                <div className={styles.leftContainer}>
-                    {tabItems.map((item, index) => {
-                        return (
-                            <TabItem title={item.company} value={item.value}
-                                     setSelectedTab={(val)=> setSelectedTab(val)}
-                                     selectedTab={selectedTab} key={item.value}/>
-                        )})}
+        <FadeInWhenVisible>
+            <div className={styles.container} id={"experiencePage"}>
+                <TitleSeparator  number={"02"} title={"Where I've Worked"}/>
+                <div className={styles.bodyContainer}>
+                    <div className={styles.leftContainer}>
+                        {tabItems.map((item, index) => {
+                            return (
+                                <TabItem title={item.company} value={item.value}
+                                         setSelectedTab={(val)=> setSelectedTab(val)}
+                                         selectedTab={selectedTab} key={item.value}/>
+                            )})}
+                    </div>
+                    <AnimatePresence>
+                        {tabItems.map((item, index) => {
+                            return (
+                                <WorkInfo item={item} selectedTab={selectedTab} key={item.value}/>
+                            )})}
+                    </AnimatePresence>
                 </div>
-                <AnimatePresence>
-                    {tabItems.map((item, index) => {
-                        return (
-                            <WorkInfo item={item} selectedTab={selectedTab} key={item.value}/>
-                        )})}
-                </AnimatePresence>
             </div>
-        </div>
+        </FadeInWhenVisible>
     )
 }
 

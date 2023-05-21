@@ -5,12 +5,18 @@ import {CiFolderOn} from "react-icons/ci";
 import {motion} from "framer-motion";
 
 interface props {
-    projectInfo: projectInfo
+    projectInfo: projectInfo;
+    delay: number
 }
 
-const ProjectCard = ({projectInfo}:props) => {
+const ProjectCard = ({projectInfo, delay}:props) => {
     return (
-        <motion.div className={styles.container} whileHover={{scale: 1.025}}>
+        <motion.div className={styles.container}
+                    whileHover={{scale: 1.025}}
+                    initial={{scale: 0, opacity: 0}}
+                    exit={{scale: 0, opacity: 0}}
+                    animate={{scale: 1, opacity: 1}}
+                    transition={{delay: delay/20}}>
             <div className={styles.headerContainer}>
                 <CiFolderOn className={styles.folderIcon}/>
                 <div className={styles.rightHeader}>

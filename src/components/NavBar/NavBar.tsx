@@ -65,7 +65,7 @@ const NavBar = ({showInitialAnimation}:navbarProps) => {
     }
 
     const handleLogoClick = () => {
-        alert("clicked")
+        location.reload()
     }
 
     useEffect(() => {

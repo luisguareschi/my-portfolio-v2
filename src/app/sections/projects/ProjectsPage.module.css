@@ -12,10 +12,11 @@
 }
 
 .title {
-    font-size: 25px;
+    font-size: 20px;
     font-family: var(--fontFamily);
     color: var(--regularFontColor);
     margin-bottom: 20px;
+    text-align: center;
 }
 .projectsContainer {
     display: grid;
