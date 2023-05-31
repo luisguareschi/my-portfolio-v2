@@ -9,7 +9,7 @@ const ProfilePicture = () => {
         <motion.div className={styles.profileContainer} whileHover={{x: 10, y:10}}>
             <motion.div whileHover={{x: -15, y:-15}} style={{background: "transparent"}}
                         className={styles.imgOuterContainer}>
-                <Image src={"/profile.JPG"} alt={"profile"} width={493} height={393} className={styles.img}/>
+                <Image src={"/profilePicture.jpg"} alt={"profile"} width={493} height={393} className={styles.img}/>
             </motion.div>
         </motion.div>
     )
