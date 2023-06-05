@@ -36,7 +36,8 @@ const Homepage = () => {
                 I am a Software Developer.
             </motion.div>
             <motion.div className={styles.description} variants={item}>
-                {"I'm"} a passionate Software Developer specializing in creating impactful and user-centric applications.
+                {"I'm"} a Mechanical Engineer with a big passion for Software Development,
+                specializing in creating impactful and user-centric applications.
                 With a focus on seamless user experiences and innovative solutions,
                 I combine technical expertise with a keen eye for design.
                 Browse through my projects to see how I bring together front-end development,
