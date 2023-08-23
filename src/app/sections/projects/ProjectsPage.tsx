@@ -54,7 +54,7 @@ const projects:projectInfo[] = [
     {
         title: "Bill Splitter",
         description: "A Next Js website that lets you split expenses with your friends in the most efficient way possible.",
-        tools: ["React Js", "Next JS"],
+        tools: ["React Js", "Next JS", "Typescript"],
         githubLink: "https://github.com/luisguareschi/bill-splitter",
         projectLink: "https://bill-splitter-pro.netlify.app/"
     },
