@@ -52,6 +52,13 @@ const projects:projectInfo[] = [
         tools: ["Python", "Tkinter", "AI", "SQL", "SAP", "VBS"]
     },
     {
+        title: "Bill Splitter",
+        description: "A Next Js website that lets you split expenses with your friends in the most efficient way possible.",
+        tools: ["React Js", "Next JS"],
+        githubLink: "https://github.com/luisguareschi/bill-splitter",
+        projectLink: "https://bill-splitter-pro.netlify.app/"
+    },
+    {
         title: "Whatsapp Me",
         description: "A tool that lets you text a phone number on whatsapp that you haven't added as a contact.",
         tools: ["React Js"],
