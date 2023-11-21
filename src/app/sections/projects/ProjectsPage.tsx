@@ -17,11 +17,28 @@ interface projectInfo {
 
 const projects:projectInfo[] = [
     {
+        title: "G-Notes",
+        description: "An application for storing secure passwords and bank accounts using encryption and firebase.",
+        tools: ["Next Js", "Firebase", "PWA"],
+    },
+    {
+        title: "FarmaTracker",
+        description: "Application used for internal management of the " +
+            "inventory management and creation of products of a pharmacy.",
+        tools: ["Next Js", "Pocketbase", "Figma"],
+    },
+    {
         title: "Trident",
         description: "A Party Game to play with your friends when going out, having a reunion, etc." +
             "The game works in a similar way to Kings Cup, but with domino pieces.",
         tools: ["React Native", "Expo", "Figma"],
         projectLink: "https://beacons.ai/luisguareschi",
+    },
+    {
+        title: "MyAnimeTracker",
+        description: "An application to receive push notifications whenever " +
+            "a new episode is released on the MAL watchlist.",
+        tools: ["React Native", "Expo", "Figma"],
     },
     {
         title: "Paso Homes",

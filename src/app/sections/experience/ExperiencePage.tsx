@@ -20,9 +20,25 @@ interface tabItem {
 
 const tabItems:tabItem[] = [
     {
+        company: "TSL",
+        startDate: ["Sept", 2023],
+        endDate: ["Present"],
+        description: ["Currently working at The Silver Logic as a software developer"],
+        value: 5,
+        jobTitle: "Full Stack Software Developer",
+    },
+    {
+        company: "Ubii Pagos",
+        startDate: ["Aug", 2023],
+        endDate: ["Present"],
+        description: ["Currently working at Ubii pagos as a software developer"],
+        value: 4,
+        jobTitle: "Full Stack Software Developer",
+    },
+    {
         company: "Trident",
         startDate: ["Nov", 2022],
-        endDate: ["Present"],
+        endDate: ["Jul", 2023],
         description: [
             "Created an app by myself for the Appstore and Google Playstore. " +
             "The app consists of a party game to play with you friends. It was developed in react native using expo.",

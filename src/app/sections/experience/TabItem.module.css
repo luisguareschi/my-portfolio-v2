@@ -8,6 +8,7 @@
     border-radius: 1px;
     width: 200px;
     min-width: max-content;
+    cursor: pointer;
 }
 
 @media (max-width: 800px) {
