@@ -23,15 +23,18 @@ const tabItems:tabItem[] = [
         company: "TSL",
         startDate: ["Sept", 2023],
         endDate: ["Present"],
-        description: ["Currently working at The Silver Logic as a software developer"],
+        description: [
+          "Currently working at The Silver Logic as a full stack software developer",
+          "Working on multiple projects for clients using Next Js, React native, docker, Django, and more"
+        ],
         value: 5,
         jobTitle: "Full Stack Software Developer",
     },
     {
         company: "Ubii Pagos",
         startDate: ["Aug", 2023],
-        endDate: ["Present"],
-        description: ["Currently working at Ubii pagos as a software developer"],
+        endDate: ["Jan", 2024],
+        description: ["Worked at Ubii Pagos as a software developer, developing a landing page for the company and also a client portal using Next Js and PHP"],
         value: 4,
         jobTitle: "Full Stack Software Developer",
     },
@@ -99,7 +102,7 @@ const tabItems:tabItem[] = [
 ]
 
 const ExperiencePage = () => {
-    const [selectedTab, setSelectedTab] = useState<number>(0)
+    const [selectedTab, setSelectedTab] = useState<number>(5)
     return (
         <FadeInWhenVisible>
             <div className={styles.container} id={"experiencePage"}>
