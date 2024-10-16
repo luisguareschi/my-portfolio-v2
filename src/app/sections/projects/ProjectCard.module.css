@@ -70,8 +70,10 @@
     gap: 10px;
     font-family: var(--codeFontFamily);
     font-size: 10px;
+    flex-wrap: wrap;
 }
 
 .tools p {
     font-family: var(--codeFontFamily);
+    white-space: nowrap;
 }

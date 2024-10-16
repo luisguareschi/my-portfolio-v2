@@ -17,6 +17,25 @@ interface projectInfo {
 
 const projects:projectInfo[] = [
     {
+        title: "AnimeTracker",
+        description: "An application to that connects with your MyAnimeList account to manage your watchlist and also sends you a push notification whenever " +
+            "a new episode is released.",
+        tools: ["Next Js", "Django", "PostgreSQL", "Tailwind CSS", "PWA"],
+        projectLink: "https://anime-tracker-lg.netlify.app/",
+    },
+    {
+        title: "Ver Crecer",
+        description: "A landing page for a pediatric clinic, designed to showcase their services, provide information about the doctors, and offer an interface for parents to schedule appointments.",
+        tools: ["Next Js"],
+        projectLink: "https://ver-crecer.com/",
+    },
+    {
+        title: "Finance Manager",
+        description: "A finance manager application that allows you to track your debts with friends and family, and financial notes.",
+        tools: ["Next Js", "Django", "PostgreSQL", "Tailwind CSS", "PWA"],
+        projectLink: "https://finance-manager-v2.netlify.app/login",
+    },
+    {
         title: "G-Notes",
         description: "An application for storing secure passwords and bank accounts using encryption and firebase.",
         tools: ["Next Js", "Firebase", "PWA"],
@@ -33,18 +52,6 @@ const projects:projectInfo[] = [
             "The game works in a similar way to Kings Cup, but with domino pieces.",
         tools: ["React Native", "Expo", "Figma"],
         projectLink: "https://beacons.ai/luisguareschi",
-    },
-    {
-        title: "MyAnimeTracker",
-        description: "An application to receive push notifications whenever " +
-            "a new episode is released on the MAL watchlist.",
-        tools: ["React Native", "Expo", "Figma"],
-    },
-    {
-        title: "Paso Homes",
-        description: "Helping out in a start up by making a home renting website using firebase and react. " +
-            "The site its still in development.",
-        tools: ["React Js", "Firebase", "Google Cloud Platform"]
     },
     {
         title: "Digitalizacion Calidad",
