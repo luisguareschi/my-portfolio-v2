@@ -20,12 +20,22 @@ interface tabItem {
 
 const tabItems:tabItem[] = [
     {
-        company: "TSL",
-        startDate: ["Sept", 2023],
+        company: "ARB Interactive",
+        startDate: ["Aug", 2025],
         endDate: ["Present"],
         description: [
-          "Currently working at The Silver Logic as a full stack software developer",
-          "Working on multiple projects for clients using Next Js, React native, docker, Django, and more"
+            "Currently working as a Software Engineer."
+        ],
+        value: 6,
+        jobTitle: "Full Stack Software Engineer"
+    },
+    {
+        company: "TSL",
+        startDate: ["Sept", 2023],
+        endDate: ["Jul", 2025],
+        description: [
+          "Worked as a full stacksoftware engineer at TSL.",
+          "Worked on multiple projects for clients using Next Js, React native, docker, Django, and more"
         ],
         value: 5,
         jobTitle: "Full Stack Software Developer",
